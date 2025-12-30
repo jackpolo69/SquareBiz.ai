@@ -1,8 +1,8 @@
 /* Hero.css */
 .hero-section {
     position: relative;
-    height: 90vh;
-    /* Almost full screen */
+    height: 100vh;
+    /* Full screen */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     /* Optional: Add a slight overlay if needed, but starting clean */

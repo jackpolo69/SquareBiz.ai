@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 
-import squareBizLogo from '../assets/square_biz_logo.png'; // Import the logo
+import squareBizLogo from '../assets/square_biz_logo_wide.png'; // Import the logo
 
 const Hero = ({ onStartClick }) => {
     return (
