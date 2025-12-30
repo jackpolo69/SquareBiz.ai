@@ -22,8 +22,8 @@
     z-index: 0;
     background-color: #000;
     /* Seamless blend */
-    background-size: contain;
-    /* Ensure full logo is always visible */
+    background-size: cover;
+    /* Fill the screen, no margins */
     background-position: center;
     background-repeat: no-repeat;
 }
