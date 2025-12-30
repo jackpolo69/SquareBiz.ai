@@ -12,7 +12,7 @@ const Hero = ({ onStartClick }) => {
                 </h1>
                 <p className="hero-subtitle">
                     The ultimate portal for Entrepreneurs and Business Owners.
-                    Reinstate your legacy. Conquer your taxes. Achieve your vision.
+                    Expediting all your business needs.
                 </p>
                 <button className="hero-cta" onClick={onStartClick}>Start Here</button>
             </div>
