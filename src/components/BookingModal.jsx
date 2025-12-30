@@ -92,7 +92,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 >
                     <div className="booking-header">
                         <div className="booking-title">
-                            <span className="icon">📡</span> Secure Drop Link
+                            <span className="icon">🎮</span> Strategy Session
                         </div>
                         <button className="booking-close" onClick={resetBooking}>&times;</button>
                     </div>
@@ -190,44 +190,44 @@ const BookingModal = ({ isOpen, onClose }) => {
 
                         {step === 3 && (
                             <motion.div initial={{ opacity: 0, x: 0 }} animate={{ opacity: 1, x: 0 }}>
-                                <h3>Operative Details</h3>
+                                <h3>Player Details</h3>
                                 <form className="booking-form" onSubmit={handleSubmit}>
                                     <div className="input-group">
-                                        <label>Full Code Name</label>
+                                        <label>Player Name</label>
                                         <input
                                             type="text"
                                             name="name"
                                             required
                                             value={bookingData.name}
                                             onChange={handleInputChange}
-                                            placeholder="Agent Smith"
+                                            placeholder="John Doe"
                                         />
                                     </div>
                                     <div className="input-group">
-                                        <label>Secure Email Frequency</label>
+                                        <label>Email Address</label>
                                         <input
                                             type="email"
                                             name="email"
                                             required
                                             value={bookingData.email}
                                             onChange={handleInputChange}
-                                            placeholder="agent@squarebiz.ai"
+                                            placeholder="you@example.com"
                                         />
                                     </div>
                                     <div className="input-group">
-                                        <label>Comms Preference</label>
+                                        <label>Session Preference</label>
                                         <select
                                             name="type"
                                             value={bookingData.type}
                                             onChange={handleInputChange}
                                         >
-                                            <option value="video">Video Uplink (Zoom/Meet)</option>
-                                            <option value="phone">Audio Only (Phone)</option>
+                                            <option value="video">Video Call (Zoom/Meet)</option>
+                                            <option value="phone">Phone Call</option>
                                         </select>
                                     </div>
                                     {bookingData.type === 'phone' && (
                                         <div className="input-group">
-                                            <label>Secure Line Number</label>
+                                            <label>Phone Number</label>
                                             <input
                                                 type="tel"
                                                 name="phone"
@@ -240,7 +240,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                                     )}
                                     <div className="booking-actions">
                                         <button type="button" className="btn-secondary" onClick={() => setStep(2)}>Back</button>
-                                        <button type="submit" className="btn-primary">Initialize Uplink</button>
+                                        <button type="submit" className="btn-primary">Confirm Session</button>
                                     </div>
                                 </form>
                             </motion.div>
@@ -253,11 +253,11 @@ const BookingModal = ({ isOpen, onClose }) => {
                                 animate={{ opacity: 1, scale: 1 }}
                             >
                                 <div className="success-icon">✅</div>
-                                <h3>Uplink Established</h3>
+                                <h3>Challenge Accepted</h3>
                                 <p>
-                                    Mission briefing scheduled for <strong>{selectedDate ? selectedDate.toLocaleDateString() : ''}</strong> at <strong>{selectedTime}</strong>.
+                                    Strategy session scheduled for <strong>{selectedDate ? selectedDate.toLocaleDateString() : ''}</strong> at <strong>{selectedTime}</strong>.
                                     <br /><br />
-                                    Secure coordinates have been transmitted to <strong>{bookingData.email}</strong>.
+                                    Confirmation details have been sent to <strong>{bookingData.email}</strong>.
                                 </p>
                                 <button className="btn-primary" onClick={resetBooking} style={{ marginTop: '2rem' }}>
                                     Return to Base

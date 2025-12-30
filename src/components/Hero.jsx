@@ -7,13 +7,25 @@ const Hero = ({ onStartClick }) => {
             <div className="hero-background"></div>
             <div className="hero-content">
                 <h1 className="hero-title">
-                    <span>Level Up Your Business</span>
+                    <span>Build Your Legacy. Create Your Reality.</span>
                     SquareBiz.ai
                 </h1>
                 <p className="hero-subtitle">
-                    The ultimate portal for Entrepreneurs and Business Owners.
-                    Expediting all your business needs.
+                    Square Biz expedites your fullest potential.<br />
+                    The ultimate one-stop shop for all your business needs.
                 </p>
+                <div style={{
+                    marginTop: '-1rem',
+                    marginBottom: '2rem',
+                    color: 'var(--accent-secondary)',
+                    fontSize: '0.9rem',
+                    letterSpacing: '2px',
+                    textTransform: 'uppercase',
+                    fontWeight: 'bold',
+                    opacity: 0.8
+                }}>
+                    Powered by mythOS
+                </div>
                 <button className="hero-cta" onClick={onStartClick}>Start Here</button>
             </div>
         </section>

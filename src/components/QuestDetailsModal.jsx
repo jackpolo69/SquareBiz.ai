@@ -42,7 +42,7 @@ const QuestDetailsModal = ({ isOpen, onClose, quest, onAccept }) => {
                             <div className="global-domination-notice">
                                 <div className="notice-icon">👑</div>
                                 <div className="notice-text">
-                                    <strong>Global Domination Protocol Activated:</strong><br />
+                                    <strong>Global Domination Unlocked:</strong><br />
                                     All in-house fees are WAIVED. You are only responsible for third-party fees, including federal and state filings, surcharges, penalties, and taxes if applicable.
                                 </div>
                             </div>
