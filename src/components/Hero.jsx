@@ -12,7 +12,7 @@ const Hero = ({ onStartClick }) => {
             }}></div>
             <div className="hero-content">
                 <h1 className="hero-title">
-                    Unlock Your Legacy
+                    Business. Evolved.
                 </h1>
 
                 {/* Spacer or padding will be handled in CSS to push text apart */}
