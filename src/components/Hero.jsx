@@ -11,7 +11,7 @@ const Hero = ({ onStartClick }) => {
                     SquareBiz.ai
                 </h1>
                 <p className="hero-subtitle">
-                    Square Biz expedites your fullest potential.<br />
+                    Expedite your fullest potential.<br />
                     The ultimate one-stop shop for all your business needs.
                 </p>
                 <div style={{
