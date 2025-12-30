@@ -24,7 +24,6 @@ const Hero = ({ onStartClick }) => {
                         color: 'var(--accent-secondary)',
                         fontSize: '0.9rem',
                         letterSpacing: '2px',
-                        textTransform: 'uppercase',
                         fontWeight: 'bold',
                         opacity: 0.8
                     }}>
