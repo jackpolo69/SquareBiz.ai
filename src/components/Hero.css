@@ -59,7 +59,18 @@
     background: linear-gradient(to right, #fff, #a0a0a0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease-out;
+}
+
+.hero-logo {
+    display: block;
+    max-width: 100%;
+    width: 600px;
+    /* Adjust based on image aspect ratio */
+    height: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.3));
 }
 
 .hero-title span {
@@ -119,5 +130,10 @@
 
     .hero-title span {
         font-size: 1.2rem;
+    }
+
+    .hero-logo {
+        width: 100%;
+        max-width: 300px;
     }
 }
