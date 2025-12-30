@@ -91,7 +91,7 @@ const Home = () => {
                                 letterSpacing: '1px'
                             }}
                         >
-                            ✨ Visionary (Launch-Ready Entrepreneur)
+                            ✨ Visionary (Aspiring Entrepreneur)
                         </button>
                     </div>
                 </div>
