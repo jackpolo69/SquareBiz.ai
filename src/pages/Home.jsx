@@ -74,7 +74,7 @@ const Home = () => {
                                 letterSpacing: '1px'
                             }}
                         >
-                            📉 Mission Critical (Compliance for Current Business)
+                            📉 Mission Critical (Business Compliance)
                         </button>
                         <button
                             onClick={() => setActivePersona('entrepreneur')}
