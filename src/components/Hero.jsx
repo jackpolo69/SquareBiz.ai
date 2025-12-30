@@ -12,16 +12,12 @@ const Hero = ({ onStartClick }) => {
             }}></div>
             <div className="hero-content">
                 <h1 className="hero-title">
-                    <span>Build Your Legacy. Create Your Reality.</span>
+                    Build Your Legacy. Create Your Reality.
                 </h1>
 
                 {/* Spacer or padding will be handled in CSS to push text apart */}
 
                 <div className="hero-text-bottom">
-                    <p className="hero-subtitle">
-                        The ultimate one-stop shop for all your business needs.
-                    </p>
-
                     <div style={{
                         marginTop: '0.5rem',
                         marginBottom: '2rem',
