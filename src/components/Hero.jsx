@@ -1,6 +1,5 @@
 import React from 'react';
 import './Hero.css';
-import heroImage from '../assets/IMG_6214.png';
 
 const Hero = ({ onStartClick }) => {
     return (
@@ -9,7 +8,7 @@ const Hero = ({ onStartClick }) => {
             <div className="hero-content">
                 <h1 className="hero-title">
                     <span>Build Your Legacy. Create Your Reality.</span>
-                    <img src={heroImage} alt="SquareBiz.ai" className="hero-logo" />
+                    SquareBiz.ai
                 </h1>
                 <p className="hero-subtitle">
                     Square Biz expedites your fullest potential.<br />
