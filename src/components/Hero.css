@@ -1,0 +1,123 @@
+/* Hero.css */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    /* Almost full screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #050505;
+    /* Fallback */
+    background: radial-gradient(circle at center, #10141e 0%, #050505 100%);
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+    background-image:
+        linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    perspective: 1000px;
+    transform: perspective(500px) rotateX(60deg) scale(2);
+    transform-origin: center top;
+    animation: gridMove 20s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: perspective(500px) rotateX(60deg) scale(2) translateY(0);
+    }
+
+    100% {
+        transform: perspective(500px) rotateX(60deg) scale(2) translateY(50px);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 0 2rem;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    background: linear-gradient(to right, #fff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title span {
+    display: block;
+    font-size: 2rem;
+    color: var(--accent-primary);
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    -webkit-text-fill-color: var(--accent-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.hero-cta {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    background: var(--accent-primary);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.hero-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(0, 240, 255, 0.6);
+    background: #fff;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-title span {
+        font-size: 1.2rem;
+    }
+}
