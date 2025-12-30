@@ -20,46 +20,43 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    opacity: 0.3;
-    background-image:
-        linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    perspective: 1000px;
-    transform: perspective(500px) rotateX(60deg) scale(2);
-    transform-origin: center top;
-    animation: gridMove 20s linear infinite;
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Optional: Add a slight overlay if needed, but starting clean */
 }
 
-@keyframes gridMove {
-    0% {
-        transform: perspective(500px) rotateX(60deg) scale(2) translateY(0);
-    }
-
-    100% {
-        transform: perspective(500px) rotateX(60deg) scale(2) translateY(50px);
-    }
-}
+/* Remove keyframes gridMove as it's no longer used */
 
 .hero-content {
     position: relative;
     z-index: 10;
-    padding: 0 2rem;
-    max-width: 800px;
+    padding: 2rem;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Push title to top, rest to bottom */
+    padding-top: 10vh;
+    /* Add some top spacing */
+    padding-bottom: 10vh;
+    /* Add some bottom spacing */
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: 3.5rem;
+    /* Slightly smaller to fit layout? */
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     letter-spacing: -2px;
     background: linear-gradient(to right, #fff, #a0a0a0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeInUp 1s ease-out;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    /* visibility over bg */
 }
 
 .hero-title span {
@@ -71,22 +68,20 @@
     text-transform: uppercase;
     margin-bottom: 0.5rem;
     -webkit-text-fill-color: var(--accent-primary);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-.hero-logo {
-    max-width: 100%;
-    width: 300px;
-    height: auto;
-    margin: 0 auto 1.5rem auto;
-    display: block;
-    animation: fadeInUp 1s ease-out 0.2s backwards;
+/* Container for the bottom content */
+.hero-text-bottom {
+    animation: fadeInUp 1s ease-out 0.5s backwards;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 3rem;
-    animation: fadeInUp 1s ease-out 0.3s backwards;
+    color: #fff;
+    /* White for better visibility on black/logo */
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 .hero-cta {
@@ -100,7 +95,6 @@
     cursor: pointer;
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
     transition: all 0.3s ease;
-    animation: fadeInUp 1s ease-out 0.6s backwards;
 }
 
 .hero-cta:hover {

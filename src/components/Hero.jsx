@@ -6,31 +6,36 @@ import squareBizLogo from '../assets/square_biz_logo.png'; // Import the logo
 const Hero = ({ onStartClick }) => {
     return (
         <section className="hero-section">
-            <div className="hero-background"></div>
+            <div className="hero-background" style={{
+                backgroundImage: `url(${squareBizLogo})`,
+                opacity: 1 // Ensure visibility
+            }}></div>
             <div className="hero-content">
                 <h1 className="hero-title">
                     <span>Build Your Legacy. Create Your Reality.</span>
                 </h1>
 
-                <img src={squareBizLogo} alt="Square Biz AI" className="hero-logo" />
+                {/* Spacer or padding will be handled in CSS to push text apart */}
 
-                <p className="hero-subtitle">
-                    The ultimate one-stop shop for all your business needs.
-                </p>
+                <div className="hero-text-bottom">
+                    <p className="hero-subtitle">
+                        The ultimate one-stop shop for all your business needs.
+                    </p>
 
-                <div style={{
-                    marginTop: '1rem',
-                    marginBottom: '2rem',
-                    color: 'var(--accent-secondary)',
-                    fontSize: '0.9rem',
-                    letterSpacing: '2px',
-                    textTransform: 'uppercase',
-                    fontWeight: 'bold',
-                    opacity: 0.8
-                }}>
-                    Powered by mythOS
+                    <div style={{
+                        marginTop: '0.5rem',
+                        marginBottom: '2rem',
+                        color: 'var(--accent-secondary)',
+                        fontSize: '0.9rem',
+                        letterSpacing: '2px',
+                        textTransform: 'uppercase',
+                        fontWeight: 'bold',
+                        opacity: 0.8
+                    }}>
+                        Powered by mythOS
+                    </div>
+                    <button className="hero-cta" onClick={onStartClick}>Start Here</button>
                 </div>
-                <button className="hero-cta" onClick={onStartClick}>Start Here</button>
             </div>
         </section>
     );
