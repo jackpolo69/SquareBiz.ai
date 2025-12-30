@@ -20,7 +20,10 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-size: cover;
+    background-color: #000;
+    /* Seamless blend */
+    background-size: contain;
+    /* Ensure full logo is always visible */
     background-position: center;
     background-repeat: no-repeat;
     /* Optional: Add a slight overlay if needed, but starting clean */
