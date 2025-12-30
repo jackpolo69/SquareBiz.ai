@@ -1,6 +1,8 @@
 import React from 'react';
 import './Hero.css';
 
+import squareBizLogo from '../assets/square_biz_logo.png'; // Import the logo
+
 const Hero = ({ onStartClick }) => {
     return (
         <section className="hero-section">
@@ -8,14 +10,16 @@ const Hero = ({ onStartClick }) => {
             <div className="hero-content">
                 <h1 className="hero-title">
                     <span>Build Your Legacy. Create Your Reality.</span>
-                    SquareBiz.ai
                 </h1>
+
+                <img src={squareBizLogo} alt="Square Biz AI" className="hero-logo" />
+
                 <p className="hero-subtitle">
-                    Expedite your fullest potential.<br />
                     The ultimate one-stop shop for all your business needs.
                 </p>
+
                 <div style={{
-                    marginTop: '-1rem',
+                    marginTop: '1rem',
                     marginBottom: '2rem',
                     color: 'var(--accent-secondary)',
                     fontSize: '0.9rem',
