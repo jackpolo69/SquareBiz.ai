@@ -18,9 +18,7 @@ const Hero = ({ onStartClick }) => {
                 {/* Spacer or padding will be handled in CSS to push text apart */}
 
                 <div className="hero-text-bottom">
-                    <p className="hero-subtitle">
-                        Initialize Your Vision. Execute.
-                    </p>
+
 
                     <div style={{
                         marginTop: '0.5rem',
