@@ -1,8 +1,9 @@
 /* Hero.css */
 .hero-section {
     position: relative;
-    height: 100vh;
-    /* Full screen */
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Full screen stability */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +21,8 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    will-change: transform;
+    /* Hardware acceleration */
     background-color: #000;
     /* Seamless blend */
     background-size: contain;
