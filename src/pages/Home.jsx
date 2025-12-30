@@ -74,7 +74,7 @@ const Home = () => {
                                 letterSpacing: '1px'
                             }}
                         >
-                            📉 Mission Critical (Struggling Owner)
+                            📉 Mission Critical (Current Business Owner)
                         </button>
                         <button
                             onClick={() => setActivePersona('entrepreneur')}
@@ -91,7 +91,7 @@ const Home = () => {
                                 letterSpacing: '1px'
                             }}
                         >
-                            ✨ Visionary (Aspiring Entrepreneur)
+                            ✨ Visionary (Launch-Ready Entrepreneur)
                         </button>
                     </div>
                 </div>
