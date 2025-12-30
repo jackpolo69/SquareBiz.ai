@@ -73,6 +73,15 @@
     -webkit-text-fill-color: var(--accent-primary);
 }
 
+.hero-logo {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
