@@ -1,8 +1,9 @@
 /* Hero.css */
 .hero-section {
     position: relative;
-    height: 100vh;
-    /* Full screen */
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Full screen stability */
     display: flex;
     align-items: center;
     justify-content: center;
