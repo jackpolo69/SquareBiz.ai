@@ -6,29 +6,15 @@ import squareBizLogo from '../assets/square_biz_logo_wide.png'; // Import the lo
 const Hero = ({ onStartClick }) => {
     return (
         <section className="hero-section">
-            <div className="hero-background" style={{
-                backgroundImage: `url(${squareBizLogo})`,
-                opacity: 1 // Ensure visibility
-            }}></div>
             <div className="hero-content">
                 <h1 className="hero-title">
                     Business. Evolved.
                 </h1>
 
-                {/* Spacer or padding will be handled in CSS to push text apart */}
+                <img src={squareBizLogo} alt="Square Biz AI" className="hero-logo" />
 
                 <div className="hero-text-bottom">
-
-
-                    <div style={{
-                        marginTop: '0.5rem',
-                        marginBottom: '2rem',
-                        color: 'var(--accent-secondary)',
-                        fontSize: '0.9rem',
-                        letterSpacing: '2px',
-                        fontWeight: 'bold',
-                        opacity: 0.8
-                    }}>
+                    <div className="hero-powered-by">
                         Powered by mythOS
                     </div>
                     <button className="hero-cta" onClick={onStartClick}>Start Here</button>

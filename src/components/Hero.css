@@ -8,30 +8,10 @@
     align-items: center;
     justify-content: center;
     background: #050505;
-    /* Fallback */
     background: radial-gradient(circle at center, #10141e 0%, #050505 100%);
     overflow: hidden;
     text-align: center;
 }
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: #000;
-    /* Seamless blend */
-    background-size: contain;
-    /* Ensure full logo is always visible */
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-
-/* Remove keyframes gridMove as it's no longer used */
 
 .hero-content {
     position: relative;
@@ -42,12 +22,27 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* Push title to top, rest to bottom */
-    padding-top: 10vh;
-    /* Add some top spacing */
-    padding-bottom: 10vh;
-    /* Add some bottom spacing */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-powered-by {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-secondary);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    opacity: 0.8;
 }
 
 .hero-title {
@@ -89,6 +84,16 @@
     transform: scale(1.05);
     box-shadow: 0 0 50px rgba(0, 240, 255, 0.6);
     background: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
