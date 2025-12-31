@@ -1,55 +1,72 @@
 /* Hero.css */
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     min-height: 100dvh;
-    /* Full screen stability */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #050505;
-    background: radial-gradient(circle at center, #10141e 0%, #050505 100%);
     overflow: hidden;
-    text-align: center;
+    background: #000;
 }
 
-.hero-content {
+.hero-background-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    /* Margin on left and right */
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    /* Ensure it doesn't overflow vertically */
+    object-fit: contain;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.hero-overlay-container {
     position: relative;
     z-index: 10;
-    padding: 2rem;
-    max-width: 1000px;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.hero-logo {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    object-fit: contain;
-    animation: fadeIn 1.5s ease-out;
+.hero-top-content {
+    /* Left side - Above Cube */
+    position: absolute;
+    top: 20%;
+    /* Approx position above left side */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.hero-powered-by {
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-    color: var(--accent-secondary);
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-    opacity: 0.8;
+.hero-bottom-content {
+    /* Center bottom content */
+    position: absolute;
+    bottom: 20%;
+    /* Keep partially low */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
 }
 
 .hero-title {
     font-size: 3.5rem;
-    /* Slightly smaller to fit layout? */
     line-height: 1.1;
-    margin-bottom: 0;
     letter-spacing: -2px;
     background: linear-gradient(to right, #fff, #a0a0a0);
     background-clip: text;
@@ -57,13 +74,17 @@
     -webkit-text-fill-color: transparent;
     animation: fadeInUp 1s ease-out;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    /* visibility over bg */
 }
 
-/* Container for the bottom content */
-.hero-text-bottom {
-    animation: fadeInUp 1s ease-out 0.5s backwards;
+.hero-powered-by {
+    color: var(--accent-secondary);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    opacity: 0.8;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
+
 
 /* Removed hero-subtitle and hero-title span as they are no longer used */
 
@@ -113,7 +134,39 @@
         font-size: 3rem;
     }
 
-    .hero-title span {
-        font-size: 1.2rem;
+    .hero-background-logo {
+        width: 95%;
+        opacity: 0.8;
+        /* Brightness fixed for mobile */
+        object-position: center;
+    }
+
+    .hero-overlay-container {
+        flex-direction: column;
+    }
+
+    /* Keep absolute positioning on mobile to match desktop layout structure */
+    .hero-top-content {
+        position: absolute;
+        top: 25%;
+        /* Shifted to 25% down */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-bottom-content {
+        position: absolute;
+        bottom: 25%;
+        /* Moved down slightly from 30% */
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-bottom-content {
+        order: 2;
     }
 }

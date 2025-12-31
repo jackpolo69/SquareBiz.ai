@@ -6,14 +6,16 @@ import squareBizLogo from '../assets/square_biz_logo_wide.png'; // Import the lo
 const Hero = ({ onStartClick }) => {
     return (
         <section className="hero-section">
-            <div className="hero-content">
-                <h1 className="hero-title">
-                    Business. Evolved.
-                </h1>
+            <img src={squareBizLogo} alt="Square Biz AI" className="hero-background-logo" />
 
-                <img src={squareBizLogo} alt="Square Biz AI" className="hero-logo" />
+            <div className="hero-overlay-container">
+                <div className="hero-top-content">
+                    <h1 className="hero-title">
+                        Business. Evolved.
+                    </h1>
+                </div>
 
-                <div className="hero-text-bottom">
+                <div className="hero-bottom-content">
                     <div className="hero-powered-by">
                         Powered by mythOS
                     </div>
